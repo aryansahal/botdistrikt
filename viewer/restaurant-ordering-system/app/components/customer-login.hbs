@@ -1,0 +1,25 @@
+<div class="login-form">
+  <h3>Login</h3>
+  <form {{on "submit" this.login}}>
+    <label for="username">Username:</label>
+    <input
+      type="text"
+      id="username"
+      value={{this.username}}
+      {{on "input" this.setUsername}}
+    />
+
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      value={{this.password}}
+      {{on "input" this.setPassword}}
+    />
+
+    <button type="submit">Sign In</button>
+    {{#if this.errorMessage}}
+      <p class="error-message">{{this.errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>

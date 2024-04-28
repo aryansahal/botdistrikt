@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <ul>
+    <li><LinkTo @route="home">Home</LinkTo></li>
+    <li><LinkTo @route="menu">Menu</LinkTo></li>
+    <li><LinkTo @route="customer-details">Customer Portal</LinkTo></li>
+    <li><LinkTo @route="order">Order</LinkTo></li>
+    {{#if this.auth.isAuthenticated}}
+      <li>
+        <button
+          type="button"
+          {{on "click" (fn this.auth.logout)}}
+        >Logout</button>
+      </li>
+    {{/if}}
+  </ul>
+</nav>

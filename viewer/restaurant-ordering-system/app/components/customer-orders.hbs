@@ -1,0 +1,6 @@
+<h3>Order History</h3>
+<ul>
+  {{#each @orders as |order|}}
+    <li>{{order.date}} - Total: ${{order.total}} - Status: {{order.status}}</li>
+  {{/each}}
+</ul>

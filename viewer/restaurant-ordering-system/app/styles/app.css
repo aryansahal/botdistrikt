@@ -1,0 +1,490 @@
+/* Base styles for the navbar */
+.navbar {
+  background-color: #2f2f2f; /* Deep gray for a subtle, professional look */
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Align items vertically */
+}
+
+.navbar li {
+  margin: 0 20px; /* Spacing between menu items */
+}
+
+.navbar a,
+.navbar button {
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar button:hover {
+  color: #e0e0e0; /* Light gray for hover state, providing subtle contrast */
+  background-color: #4a4a4a; /* Darker gray for hover background */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+
+  .navbar li {
+    margin: 10px 0; /* Adjust margin for stacked items */
+  }
+}
+
+/* Home */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #444;
+  line-height: 1.6;
+}
+
+.main-header {
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  padding: 20px 20px;
+  height: 33.33vh; /* 1/3 of the viewport height */
+  box-sizing: border-box; /* Includes padding in the height calculation */
+}
+.main-header h1 {
+  text-align: center;
+  font-size: 48px; /* Increased from previous value */
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Styling for the About Us section */
+.about-us {
+  background-color: #fff;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-us h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 15px;
+  text-align: justify; /* Justifies the text for better alignment */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-us {
+    max-width: 90%;
+    padding: 20px;
+  }
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  height: 33.33vh; /* 1/3 of the viewport height */
+  box-sizing: border-box; /* Includes padding in the height calculation */
+}
+
+.footer-info div {
+  margin: 0 20px;
+}
+
+.footer-info h2 {
+  font-size: 18px;
+}
+
+.footer-info p {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .footer-info {
+    flex-direction: column;
+    text-align: center;
+    align-items: center; /* Center content vertically */
+  }
+
+  .footer-info div {
+    margin-bottom: 10px; /* Ensures spacing between items when stacked */
+  }
+}
+
+/* Centering the form and setting a max width for better readability on large screens */
+.order-form {
+  width: 80%;
+  margin: 10px auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+/* Styling for each order item within the form */
+.order-item {
+  background: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.order-item:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.order-item-details {
+  margin-bottom: 15px;
+}
+.order-item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-item-name {
+  flex: 1; /* Allows the name to take up the rest of the space */
+  margin-right: 20px; /* Adds some space between the name and the quantity */
+}
+
+.order-item-quantity {
+  flex-basis: 20px; /* Fixed width for the quantity input area */
+  text-align: right;
+}
+
+.order-label {
+  display: block;
+}
+
+.order-input {
+  width: 100%; /* Makes input take the full width of its container */
+  padding: 6px 10px;
+  margin-top: 5px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px; /* Larger font size for better readability */
+  transition: border-color 0.2s ease-in-out;
+}
+
+.order-input:focus {
+  border-color: #4a90e2; /* Vibrant color when focused */
+}
+
+/* Submit button styling */
+.submit-button {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #4a90e2; /* A more vibrant color for the button */
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #357abd;
+}
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  color: #585858;
+  margin: 20px 0;
+}
+
+.order-form {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.order-item-component {
+  margin-bottom: 10px;
+}
+
+.order-item {
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.order-item-details {
+  margin-bottom: 10px;
+}
+
+.order-item-name {
+  font-size: 18px;
+  color: #585858;
+}
+
+.order-item-quantity {
+  display: flex;
+  align-items: center;
+}
+
+.order-label {
+  font-size: 16px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.order-input {
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100px; /* Fixed width for consistency */
+}
+
+/* Error message styling */
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Overall styling for the login form container */
+.login-form {
+  max-width: 320px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+.login-form h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Styling for form labels and inputs */
+.login-form label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Enhancements for the submit button */
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #575857; /* Darker green on hover */
+}
+
+/* Styling for error messages */
+.error-message {
+  color: #d9534f; /* Bootstrap's `btn-danger` color */
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* Menu page styles */
+
+/* Base styles for overall consistency */
+.menu-title {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin: 20px 0;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 80%s;
+  margin: auto;
+}
+
+/* Individual menu item card styles */
+.menu-item-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* Slightly darker shadow for more depth */
+  transition: transform 0.3s ease-in-out;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9f9f9; /* Light gray background for cards */
+}
+
+.menu-item-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.menu-item-content {
+  padding: 15px;
+  background-color: white;
+}
+
+.menu-item-name {
+  font-size: 20px;
+  color: #333;
+  margin-top: 0;
+}
+
+.menu-item-description {
+  font-size: 16px;
+  color: #666; /* Lighter gray for less emphasis */
+  margin-top: 5px;
+}
+
+.menu-item-price {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Base styling for the customer details page */
+
+/* Container styling */
+.customer-details-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.heading-primary {
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.customer-info-table,
+.orders-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  color: #666;
+  font-weight: bold;
+}
+
+.heading-secondary {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.order-history {
+  margin-top: 20px;
+}
+
+.orders-list-table thead th {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.order-item:hover {
+  background-color: #f9f9f9;
+}

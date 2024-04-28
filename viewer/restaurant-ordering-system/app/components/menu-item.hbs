@@ -1,0 +1,12 @@
+{{! app/components/menu-item.hbs }}
+<div class="menu-item-card">
+  <img src="{{@dish.image}}" alt="{{@dish.name}}" class="menu-item-image" />
+
+  <div class="menu-item-content">
+    <h3 class="menu-item-name">{{@dish.name}}</h3>
+    <p class="menu-item-description">{{@dish.description}}</p>
+    <p class="menu-item-price"><strong>Price:</strong> ${{@dish.price}}</p>
+  </div>
+</div>
+
+{{yield}}

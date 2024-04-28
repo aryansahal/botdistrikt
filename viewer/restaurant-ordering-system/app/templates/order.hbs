@@ -1,0 +1,10 @@
+<h1 class="page-title">Place Your Order</h1>
+<form {{on "submit" this.submitOrder}} class="order-form">
+  {{#each this.model as |item|}}
+    <div class="order-item-component">
+      <OrderItem @item={{item}} @updateQuantity={{this.updateOrder}} />
+
+    </div>
+  {{/each}}
+  <button type="submit" class="submit-button">Place Order</button>
+</form>

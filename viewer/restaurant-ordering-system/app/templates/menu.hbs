@@ -1,0 +1,7 @@
+{{!-- app/templates/menu.hbs --}}
+<h1 class="menu-title">Menu</h1>
+<div class="menu-grid">
+  {{#each this.model as |dish|}}
+    <Menu-item @dish={{dish}} />
+  {{/each}}
+</div>

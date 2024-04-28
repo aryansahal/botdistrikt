@@ -1,0 +1,19 @@
+{{! app/components/order-item.hbs }}
+<div class="order-item">
+  <div class="order-item-details">
+    <h3 class="order-item-name">{{@item.name}} - ${{@item.price}}</h3>
+    <div class="order-item-quantity">
+      <label for="quantity-{{@item.id}}" class="order-label">Quantity:</label>
+      <input
+        type="number"
+        id="quantity-{{@item.id}}"
+        name="quantity-{{@item.id}}"
+        min="0"
+        value="{{this.quantity}}"
+        class="order-input"
+        {{on "input" (fn this.updateQuantity)}}
+      />
+
+    </div>
+  </div>
+</div>
