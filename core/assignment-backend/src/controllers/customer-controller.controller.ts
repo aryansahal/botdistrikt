@@ -43,7 +43,7 @@ export class CustomerControllerController {
   ): Promise<Customer | null> {
     return this.customerRepository.findOne({
       where: {username},
-      include: [{relation: 'orders'}], // This will include orders related to the customer
+      include: [{relation: 'orders'}],
     });
   }
 

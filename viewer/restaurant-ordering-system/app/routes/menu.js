@@ -11,7 +11,6 @@ export default class MenuRoute extends Route {
       return menuItems;
     } catch (error) {
       console.error('Error fetching menu items:', error);
-      // Handle errors more gracefully in a real application
       return [];
     }
   }

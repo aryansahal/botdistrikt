@@ -49,7 +49,7 @@ export class AssignmentBackendApplication extends BootMixin(
   configureRestServer(options: ApplicationConfig) {
     const config: RestServerConfig = {
       cors: {
-        origin: '*', // or specify domains like ['http://example.com', 'https://anotherdomain.com']
+        origin: '*',
         methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
         credentials: true,
         maxAge: 86400,

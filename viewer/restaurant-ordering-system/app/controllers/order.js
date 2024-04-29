@@ -8,7 +8,7 @@ export default class OrderController extends Controller {
   @service auth;
   @service router;
   @tracked quantity;
-  @tracked orderItems = new Map(); // Tracks item IDs and their quantities
+  @tracked orderItems = new Map();
 
   calculateTotal() {
     let total = 0;
@@ -36,8 +36,8 @@ export default class OrderController extends Controller {
     }
 
     const items = Array.from(this.orderItems.entries()).map(
-      ([id, { quantity, price }]) => ({
-        menuItemId: id, // Adjust the property name to match your backend model
+      ([id, { quantity }]) => ({
+        menuItemId: id,
         quantity,
       }),
     );
@@ -91,11 +91,9 @@ export default class OrderController extends Controller {
         }
       }
 
-      // Transition to success page after successfully submitting order and order items
       this.router.transitionTo('customer-details');
     } catch (error) {
       console.error('Error submitting order:', error);
-      // Optionally update the UI to show the error message
     }
   }
 }

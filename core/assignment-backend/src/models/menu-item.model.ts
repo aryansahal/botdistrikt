@@ -1,5 +1,5 @@
 import {Entity, model, property, hasMany} from '@loopback/repository';
-import {OrderItem} from './order-item.model'; // Correct the import path if necessary
+import {OrderItem} from './order-item.model';
 
 @model()
 export class MenuItem extends Entity {
@@ -23,7 +23,7 @@ export class MenuItem extends Entity {
   price: number;
 
   @property({
-    type: 'string', // Correct the data type for description
+    type: 'string',
     required: true,
   })
   description: string;
@@ -33,7 +33,7 @@ export class MenuItem extends Entity {
   })
   image?: string;
 
-  @hasMany(() => OrderItem) // Define the relationship with OrderItem
+  @hasMany(() => OrderItem)
   orderItems: OrderItem[];
 
   constructor(data?: Partial<MenuItem>) {

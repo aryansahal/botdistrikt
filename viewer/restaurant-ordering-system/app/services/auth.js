@@ -6,7 +6,7 @@ import { inject as service } from '@ember/service';
 export default class AuthService extends Service {
   @service router;
   @tracked isAuthenticated = false;
-  @tracked user = null; // Now storing user as an object to include more details
+  @tracked user = null;
   @tracked accessToken = '';
   @tracked errorMessage = '';
 
@@ -50,7 +50,7 @@ export default class AuthService extends Service {
         this.isAuthenticated = false;
         this.user = null;
         this.errorMessage = 'Invalid username or password. Please try again.';
-        return false; // Authentication failed
+        return false;
       }
     } catch (error) {
       console.error('Error during login:', error);
@@ -58,7 +58,7 @@ export default class AuthService extends Service {
       this.user = null;
       this.errorMessage =
         'An unexpected error occurred. Please try again later.';
-      return false; // Authentication failed due to an error
+      return false;
     }
   }
 

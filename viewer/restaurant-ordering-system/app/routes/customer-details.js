@@ -1,4 +1,3 @@
-// app/routes/customer/details.js
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
@@ -19,12 +18,11 @@ export default class CustomerDetailsRoute extends Route {
     }
 
     try {
-      // Use the user ID stored in the AuthService
       const response = await fetch(
         `http://localhost:3000/customers/${this.auth.user.id}/orders`,
         {
           headers: {
-            Authorization: `Bearer ${this.auth.accessToken}`, // Ensure you handle the accessToken storage as well
+            Authorization: `Bearer ${this.auth.accessToken}`,
           },
         },
       );
